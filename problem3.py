@@ -28,7 +28,7 @@ def findPrimeFactors(num):
     
     largestPrime = 0
 
-    while start < max: #not sure if i can justify this choice 
+    while start < max: 
 
         if num%start == 0:
 
@@ -41,7 +41,7 @@ def findPrimeFactors(num):
             if isPrime(largerFactor):
                 return largerFactor
             
-            max = largerFactor    
+            max = largerFactor #remaining factors mus be between start and its corresponding factor
         start += 1
     return largestPrime
 
@@ -49,6 +49,9 @@ def findPrimeFactors(num):
 print findPrimeFactors(13195)
 
 print findPrimeFactors(600851475143)
+
+#print findPrimeFactors(1238162376372637826) not fast enough for this... yet
+
 
 
 """
