@@ -28,15 +28,19 @@ def findPrimeFactors(num):
     
     largestPrime = 0
 
-    while start < max/2:
+    while start < max: #not sure if i can justify this choice 
 
         if num%start == 0:
-            
+
+            #finding pairs of factors and checking whether they are prime
+
             if isPrime(start):
                 largestPrime = start
+
             largerFactor = num/start
             if isPrime(largerFactor):
                 return largerFactor
+            
             max = largerFactor    
         start += 1
     return largestPrime
