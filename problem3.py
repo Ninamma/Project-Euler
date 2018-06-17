@@ -13,9 +13,9 @@ Then is it prime.
 
 
 def isPrime(num):    
-    divisor = int(num**0.5) + 1
+    divisor = int(num**0.5)
 
-    while divisor > 2:
+    while divisor > 1:
         if num%divisor == 0:
             return False
         divisor -= 1
