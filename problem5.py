@@ -4,8 +4,66 @@
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 """
 
+a = 1
+b = 20
+
+start = b
+factor = b
+
+while factor > 0:
+    if start%factor == 0:
+        factor -= 1
+    else:
+        factor = b
+        start += b
+print start
 
 
+
+
+"""
+def findNum(a,b):
+    start = b
+    factor = b
+    
+    while factor > 0:
+        if start%factor == 0:
+            factor -= 1
+        start += b
+        factor = b
+    return start
+
+print findNum(1,10)
+
+
+"""
+
+
+
+
+
+
+"""
+
+def findNum(a,b):
+    start = b
+    factor = a
+
+    while factor <= b:
+        if start%factor == 0:
+            print factor
+            factor += 1
+        print start
+        start += 1
+    return start
+
+print findNum(1,10)
+
+"""
+
+
+
+"""
 def findNum(a,b):
     start = b
     nums = range(a,b+1)
@@ -25,10 +83,6 @@ def findNum(a,b):
 
 print isDivisible(1,10)
 
-
-
-
-
-
+"""
 
 
